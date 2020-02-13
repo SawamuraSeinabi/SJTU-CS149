@@ -31,7 +31,7 @@ void priorityQueue<Type>::enQueue(const Type& x)
 	if (currentSize == maxSize - 1)  doubleSpace();
 
 	// 向上过滤
-	int hole = ++currentSize; // hole为空结点所在数组位置
+	int hole = ++currentSize; //hole为空结点所在数组位置
 	for (; hole > 1 && x < array[hole / 2]; hole /= 2)
 		array[hole] = array[hole / 2];
 	array[hole] = x;
